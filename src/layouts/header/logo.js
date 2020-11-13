@@ -1,24 +1,28 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import logo from 'icons/server.png'
 
 const LogoDiv = styled.a`
-  width: 5rem;
-  height: 5rem;
   display: flex;
-  margin-right: 5rem;
 
-  img {
-    margin: auto;
-    width: 3rem;
-    height: 3rem;
+  div {
+    margin-left: 15vw;
+    width: 135px;
+    height: 20px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    /* identical to box height */
+    text-align: center;
+    color: #333333;
   }
 `
 
 export default function Logo() {
   return (
     <LogoDiv>
-      <img src={logo} alt={'database'}></img>
+      <div>ClipboardHealth</div>
     </LogoDiv>
   )
 }

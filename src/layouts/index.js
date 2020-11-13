@@ -1,6 +1,5 @@
-import Icon from './header/icon'
-import Layout from './layout'
-import Logo from './header/logo'
 import Header from './header'
+import Completed from './completed'
+import Layout from './layout'
 
-export { Header, Layout, Icon, Logo }
+export { Completed, Header, Layout }

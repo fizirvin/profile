@@ -1,5 +1,3 @@
-import './App.css'
-
 import { Layout } from 'layouts'
 import { Profile } from 'pages'
 

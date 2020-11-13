@@ -10,6 +10,6 @@ export const LayoutDiv = styled.div`
 export const MainContainer = styled.main`
   position: absolute;
   width: 100%;
-  top: 5rem;
+  top: 10rem;
   height: 90vh;
 `

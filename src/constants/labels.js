@@ -22,7 +22,7 @@ export const HOSPITAL = 'Hospital'
 export const DEPARTMENT = 'Department'
 export const FROM_MONTH = 'From Month'
 export const IN_YEAR = 'In Year'
-export const TO_MONTH = 'Description'
+export const TO_MONTH = 'To Month'
 export const DESCRIPTION = 'Description'
 export const TITLE_REVIEW = 'Title of your review'
 export const SALARY = 'Salary'
@@ -45,12 +45,12 @@ export const GRADE = 'Grade'
 export const FROM_YEAR = 'From year'
 export const TO_YEAR = 'To year(or expected)'
 // certification
-export const CERTIFICATION = 'Certification Name'
+export const CERTIFICATION_NAME = 'Certification Name'
 export const CERTIFICATION_AUTHO = 'Certification Authority'
 export const LICENSE_NUM = 'Licence Number'
 // references
-export const REFERENCEN = "Reference's name"
-export const REFERENCEEMAIL = "Reference's Email"
+export const REFERENCE_NAME = "Reference's name"
+export const REFERENCE_EMAIL = "Reference's Email"
 // links
 export const LINKEDIN = 'LinkedIn'
 export const TWITTER = 'Twitter'

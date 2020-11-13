@@ -1,20 +1,21 @@
 import React from 'react'
-import { Subtitle, TextInput } from 'components'
 import { LINKS } from 'constants/subtitles'
 import { LINKEDIN, TWITTER, FACEBOOK, PERSONALW } from 'constants/labels'
+import { Subtitle, TextInput } from 'components'
+import { ImputContainer, Section } from './styles'
 
 export default function Links() {
   return (
-    <>
+    <Section>
       <Subtitle subtitle={LINKS} />
-      <div>
+      <ImputContainer>
         <TextInput label={LINKEDIN} />
         <TextInput label={TWITTER} />
-      </div>
-      <div>
+      </ImputContainer>
+      <ImputContainer>
         <TextInput label={FACEBOOK} />
         <TextInput label={PERSONALW} />
-      </div>
-    </>
+      </ImputContainer>
+    </Section>
   )
 }

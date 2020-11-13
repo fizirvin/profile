@@ -1,6 +1,9 @@
 import React from 'react'
 import { ContainerDiv, HeaderContainer, NavContainer } from './styles'
-import { Icon, Logo } from 'layouts'
+import Logo from './logo'
+import Nav from './nav'
+import Icons from './icons'
+import User from './user'
 
 export default function Header() {
   return (
@@ -8,8 +11,9 @@ export default function Header() {
       <ContainerDiv>
         <NavContainer>
           <Logo />
-          <Icon />
-          <div>nav</div>
+          <Nav />
+          <Icons />
+          <User />
         </NavContainer>
       </ContainerDiv>
     </HeaderContainer>

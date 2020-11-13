@@ -37,6 +37,51 @@ export const Input = styled.input`
   border-radius: 3px;
 `
 
+export const AllInput = styled.input`
+  height: 35px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 3px;
+`
+
 export const InputContainer = styled.div`
   display: block;
+`
+
+export const Button = styled.button`
+  width: 157px;
+  height: 35px;
+  background: #ffffff;
+  border: 1px solid #2cb1f4;
+  box-sizing: border-box;
+  border-radius: 3px;
+`
+
+export const AddButtonStyled = styled.button`
+  width: 215px;
+  height: 35px;
+  left: 376.5px;
+  top: 2390.5px;
+
+  background: #2cb1f4;
+  border-radius: 3px;
+`
+
+export const TextArea = styled.textarea`
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  resize: none;
+`
+export const Select = styled.select`
+  width: 157px;
+  height: 35px;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 3px;
 `
