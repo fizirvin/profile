@@ -6,6 +6,7 @@ const UserDiv = styled.div`
   display: flex;
 
   @media (max-width: 850px) {
+    display: none;
   }
 
   div {

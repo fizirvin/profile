@@ -17,6 +17,18 @@ const LogoDiv = styled.a`
     text-align: center;
     color: #333333;
   }
+
+  @media (max-width: 850px) {
+    div {
+      font-size: 15px;
+      line-height: 18px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #333333;
+    }
+  }
 `
 
 export default function Logo() {

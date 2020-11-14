@@ -28,7 +28,7 @@ export const YEARS = [
   '2010'
 ]
 
-export const DEGREES = ['1 Degree', '2 Degree', '2 Degree', '4 Degree']
+export const DEGREES = ['1 Degree', '2 Degree', '3 Degree', '4 Degree']
 
 export const STATE_LIST = ['1 State', '2 State', '3 State', '4 State']
 

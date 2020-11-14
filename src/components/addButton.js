@@ -1,6 +1,10 @@
 import React from 'react'
-import { AddButtonStyled } from './styles'
+import { AddButtonStyled, ButtonTitle } from './styles'
 
 export default function AddButton({ title }) {
-  return <AddButtonStyled>{title}</AddButtonStyled>
+  return (
+    <AddButtonStyled>
+      <ButtonTitle>+ {title}</ButtonTitle>
+    </AddButtonStyled>
+  )
 }

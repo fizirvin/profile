@@ -70,7 +70,7 @@ export default function Experience() {
           <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
         </QuartLast>
       </RowContainer>
-      <TextAreaInput label={DESCRIPTION} rows={'10'} cols={'100'} />
+      <TextAreaInput label={DESCRIPTION} rows={'8'} />
       <RowContainer>
         <ThreeQuart>
           <TextInput label={TITLE_REVIEW} />
@@ -105,7 +105,7 @@ export default function Experience() {
           <SelectInput label={RECOMMEND} name="Yes" items={YEARS} />
         </QuartLast>
       </RowContainer>
-      <TextAreaInput label={REASONS_RECOMMEND} rows={'10'} cols={'100'} />
+      <TextAreaInput label={REASONS_RECOMMEND} rows={'8'} />
       <AddButton title={ADD_EXPERIENCE} />
     </Section>
   )

@@ -6,14 +6,18 @@ import TextAllInput from './textAll'
 import TextAreaInput from './textAreaInput'
 import TextInput from './textInput'
 import Title from './title'
+import PictureInput from './pictureInput'
+import SwitchInput from './switchInput'
 
 export {
   AddButton,
+  PictureInput,
   RequestButton,
   SelectInput,
   Subtitle,
   TextAllInput,
   TextAreaInput,
   TextInput,
-  Title
+  Title,
+  SwitchInput
 }

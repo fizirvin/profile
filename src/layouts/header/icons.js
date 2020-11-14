@@ -11,6 +11,7 @@ const IconDiv = styled.div`
   top: 0px;
 
   @media (max-width: 850px) {
+    display: none;
   }
 
   div {

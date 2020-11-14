@@ -36,21 +36,16 @@ const UList = styled.ul`
   }
 
   @media (max-width: 850px) {
-    position: fixed;
-    top: 0;
-    left: 0;
     height: 100vh;
     display: none;
     flex-direction: column;
     align-items: initial;
-    background-color: blue;
     z-index: 1000;
-    overflow-y: scroll;
+    background: #ffffff;
 
     li {
       line-height: 33px;
     }
-    display: flex;
 
     li:hover > ul {
       opacity: 1;

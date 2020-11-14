@@ -57,8 +57,8 @@ export default function Rotations() {
           <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
         </QuartLast>
       </RowContainer>
-      <TextAreaInput label={DESCRIPTION} rows={'10'} cols={'100'} />
-      <TextAreaInput label={DETAILS} rows={'10'} cols={'100'} />
+      <TextAreaInput label={DESCRIPTION} rows={'5'} />
+      <TextAreaInput label={DETAILS} rows={'5'} />
       <AddButton title={ADD_ROTATION} />
     </Section>
   )

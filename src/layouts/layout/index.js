@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header, Completed } from 'layouts'
+import Footer from './footer'
 import { LayoutDiv, MainContainer } from './styles'
 
 export default function Layout({ children }) {
@@ -8,6 +9,7 @@ export default function Layout({ children }) {
       <Header />
       <Completed />
       <MainContainer>{children}</MainContainer>
+      <Footer />
     </LayoutDiv>
   )
 }

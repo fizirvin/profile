@@ -11,7 +11,13 @@ import Certification from './certification'
 import Acomplishments from './accomplishments'
 import References from './references'
 import Links from './links'
-import { MenuContainer, ProfilesContainer, SettingsContainer } from './styles'
+import Percent from 'layouts/completed/percent'
+import {
+  MenuContainer,
+  ProfilesContainer,
+  SettingsContainer,
+  ProgressContainer
+} from './styles'
 
 export default function Profile() {
   return (
@@ -30,6 +36,9 @@ export default function Profile() {
         <Acomplishments />
         <References />
         <Links />
+        <ProgressContainer>
+          <Percent progress={'5%'}></Percent>
+        </ProgressContainer>
       </SettingsContainer>
     </ProfilesContainer>
   )

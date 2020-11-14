@@ -1,6 +1,11 @@
 import React from 'react'
-import { Button } from './styles'
+import { Button, Label } from './styles'
 
 export default function RequestButton({ title }) {
-  return <Button>{title}</Button>
+  return (
+    <>
+      <Label></Label>
+      <Button>{title}</Button>
+    </>
+  )
 }
