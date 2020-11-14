@@ -19,22 +19,39 @@ import {
   TextInput,
   TextAllInput
 } from 'components'
-import { ImputContainer, Section } from './styles'
+import {
+  RowContainer,
+  Section,
+  Quart,
+  QuartLast,
+  Half,
+  HalfLast
+} from './styles'
 
 export default function Education() {
   return (
     <Section>
       <Subtitle subtitle={EDUCATION} />
       <TextAllInput label={SCHOOL} />
-      <ImputContainer>
-        <SelectInput label={DEGREE} name="Degree" items={DEGREES} />
-        <TextInput label={FIELD} />
-        <TextInput label={GRADE} />
-      </ImputContainer>
-      <ImputContainer>
-        <TextInput label={FROM_YEAR} />
-        <TextInput label={TO_YEAR} />
-      </ImputContainer>
+      <RowContainer>
+        <Quart>
+          <SelectInput label={DEGREE} name="Degree" items={DEGREES} />
+        </Quart>
+        <Half>
+          <TextInput label={FIELD} />
+        </Half>
+        <QuartLast>
+          <TextInput label={GRADE} />
+        </QuartLast>
+      </RowContainer>
+      <RowContainer>
+        <Half>
+          <TextInput label={FROM_YEAR} />
+        </Half>
+        <HalfLast>
+          <TextInput label={TO_YEAR} />
+        </HalfLast>
+      </RowContainer>
       <TextAreaInput label={DESCRIPTION} rows={'10'} cols={'100'} />
       <AddButton title={ADD_EDUCATION} />
     </Section>

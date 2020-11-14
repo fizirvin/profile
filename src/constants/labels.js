@@ -31,7 +31,7 @@ export const NURSE_RATIO = 'Nurse & pationt Ratio'
 export const TURNOVER_RATE = 'Turnover Rate'
 export const RECOMMEND = 'Will you recommend'
 export const REASONS_RECOMMEND =
-  'Reasons to recommend (please be as specific as posible)'
+  'Reasons to recommend (Please be as specific as posible)'
 //clinical rotations
 export const ORGANIZATION = 'Organization/Employer'
 export const CARE_CENTER = 'Hospital/Care Center'

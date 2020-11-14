@@ -17,7 +17,15 @@ import {
   Subtitle,
   TextInput
 } from 'components'
-import { ImputContainer, Section } from './styles'
+import {
+  ImputContainer,
+  RowContainer,
+  Half,
+  Quart,
+  QuartLast,
+  Section,
+  HalfLast
+} from './styles'
 
 export default function Certification() {
   return (
@@ -26,16 +34,28 @@ export default function Certification() {
 
       <TextAllInput label={CERTIFICATION_NAME} />
 
-      <ImputContainer>
-        <TextInput label={CERTIFICATION_AUTHO} />
-        <TextInput label={LICENSE_NUM} />
-      </ImputContainer>
-      <ImputContainer>
-        <SelectInput label={FROM_MONTH} name="Month" items={MONTHS} />
-        <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
-        <SelectInput label={TO_MONTH} name="Month" items={MONTHS} />
-        <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
-      </ImputContainer>
+      <RowContainer>
+        <Half>
+          <TextInput label={CERTIFICATION_AUTHO} />
+        </Half>
+        <HalfLast>
+          <TextInput label={LICENSE_NUM} />
+        </HalfLast>
+      </RowContainer>
+      <RowContainer>
+        <Quart>
+          <SelectInput label={FROM_MONTH} name="Month" items={MONTHS} />
+        </Quart>
+        <Quart>
+          <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
+        </Quart>
+        <Quart>
+          <SelectInput label={TO_MONTH} name="Month" items={MONTHS} />
+        </Quart>
+        <QuartLast>
+          <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
+        </QuartLast>
+      </RowContainer>
       <AddButton title={ADD_CERTIFICATION} />
     </Section>
   )

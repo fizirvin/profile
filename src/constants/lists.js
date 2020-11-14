@@ -29,3 +29,20 @@ export const YEARS = [
 ]
 
 export const DEGREES = ['1 Degree', '2 Degree', '2 Degree', '4 Degree']
+
+export const STATE_LIST = ['1 State', '2 State', '3 State', '4 State']
+
+export const COUNTRIES_LIST = [
+  '1 Country',
+  '2 Country',
+  '3 Country',
+  '4 Country'
+]
+
+export const GENDERS_LIST = ['Female', 'Male']
+
+export const STATUS_JOB_LIST = ['Active', 'Unactive']
+
+export const EXP_PRIOR_LIST = ['2 years', '3 years', '4 years']
+export const NURSE_RATIO_LIST = ['1 - 100', '2  - 100', '3 - 100']
+export const TURNOVER_LIST = ['Medium', 'High']

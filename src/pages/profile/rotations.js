@@ -9,28 +9,57 @@ import {
   DESCRIPTION,
   DETAILS
 } from 'constants/labels'
+import { ADD_ROTATION } from 'constants/buttons'
 import { MONTHS, YEARS } from 'constants/lists'
 import { ROTATIONS } from 'constants/subtitles'
-import { SelectInput, Subtitle, TextAreaInput, TextInput } from 'components'
-import { ImputContainer, Section } from './styles'
+import {
+  AddButton,
+  SelectInput,
+  Subtitle,
+  TextAreaInput,
+  TextInput
+} from 'components'
+import {
+  Quart,
+  QuartLast,
+  Section,
+  Thirds,
+  ThirdsLast,
+  RowContainer
+} from './styles'
 
 export default function Rotations() {
   return (
     <Section>
       <Subtitle subtitle={ROTATIONS} />
-      <ImputContainer>
-        <TextInput label={ORGANIZATION} />
-        <TextInput label={CARE_CENTER} />
-        <TextInput label={DEPARTMENT} />
-      </ImputContainer>
-      <ImputContainer>
-        <SelectInput label={FROM_MONTH} name="Month" items={MONTHS} />
-        <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
-        <SelectInput label={TO_MONTH} name="Month" items={MONTHS} />
-        <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
-      </ImputContainer>
+      <RowContainer>
+        <Thirds>
+          <TextInput label={ORGANIZATION} />
+        </Thirds>
+        <Thirds>
+          <TextInput label={CARE_CENTER} />
+        </Thirds>
+        <ThirdsLast>
+          <TextInput label={DEPARTMENT} />
+        </ThirdsLast>
+      </RowContainer>
+      <RowContainer>
+        <Quart>
+          <SelectInput label={FROM_MONTH} name="Month" items={MONTHS} />
+        </Quart>
+        <Quart>
+          <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
+        </Quart>
+        <Quart>
+          <SelectInput label={TO_MONTH} name="Month" items={MONTHS} />
+        </Quart>
+        <QuartLast>
+          <SelectInput label={IN_YEAR} name="Year" items={YEARS} />
+        </QuartLast>
+      </RowContainer>
       <TextAreaInput label={DESCRIPTION} rows={'10'} cols={'100'} />
       <TextAreaInput label={DETAILS} rows={'10'} cols={'100'} />
+      <AddButton title={ADD_ROTATION} />
     </Section>
   )
 }

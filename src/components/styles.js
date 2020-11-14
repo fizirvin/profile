@@ -15,7 +15,6 @@ export const LineSpan = styled.div`
 `
 
 export const Label = styled.div`
-  width: 333px;
   height: 16px;
   font-family: 'Raleway';
   font-style: normal;
@@ -24,13 +23,9 @@ export const Label = styled.div`
   line-height: 16px;
   color: #7c7c7c;
 `
-
 export const Input = styled.input`
-  width: 333.5px;
+  width: 100%;
   height: 35px;
-  left: 376.5px;
-  top: 4473px;
-
   background: #ffffff;
   border: 1px solid #d5d5d5;
   box-sizing: border-box;
@@ -51,12 +46,19 @@ export const InputContainer = styled.div`
 `
 
 export const Button = styled.button`
-  width: 157px;
+  width: 100%;
   height: 35px;
   background: #ffffff;
   border: 1px solid #2cb1f4;
   box-sizing: border-box;
   border-radius: 3px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #2cb1f4;
 `
 
 export const AddButtonStyled = styled.button`
@@ -78,7 +80,7 @@ export const TextArea = styled.textarea`
   resize: none;
 `
 export const Select = styled.select`
-  width: 157px;
+  width: 100%;
   height: 35px;
   background: #ffffff;
   border: 1px solid #d5d5d5;
