@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Logo from './logo'
 import Menu from './menu'
+import Buttons from './buttons'
 
 export const NavContainer = styled.nav`
   display: flex;
@@ -19,7 +20,7 @@ export default function AuthNav() {
     <NavContainer>
       <Logo />
       <Menu />
-      <div>hola</div>
+      <Buttons />
     </NavContainer>
   )
 }

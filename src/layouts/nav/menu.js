@@ -8,7 +8,6 @@ const UList = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
 
   a {
     display: block;
