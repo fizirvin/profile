@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { newUser } from './mutations'
 import { fetchItems } from 'services'
-import { LoginButton, WithEmailButton } from 'components/buttons'
+import { LoginButton, SignUpRequest } from 'components/buttons'
 import {
   TextInput,
   TextAllInput,
@@ -165,7 +165,7 @@ export default function SignupWithEmail() {
           onChange={onChangeHandler}
         />
         <WithEmailButtonArea>
-          <WithEmailButton onClick={onSubmit} />
+          <SignUpRequest onClick={onSubmit} />
         </WithEmailButtonArea>
         <FooterForm>
           <FooterText>Already have an account?</FooterText>
