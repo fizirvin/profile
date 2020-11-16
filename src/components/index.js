@@ -8,6 +8,9 @@ import TextInput from './textInput'
 import Title from './title'
 import PictureInput from './pictureInput'
 import SwitchInput from './switchInput'
+import PasswordInput from './passwordInput'
+import EmailInput from './emailInput'
+import Spinner from './spinner'
 
 export {
   AddButton,
@@ -19,5 +22,8 @@ export {
   TextAreaInput,
   TextInput,
   Title,
-  SwitchInput
+  SwitchInput,
+  PasswordInput,
+  EmailInput,
+  Spinner
 }

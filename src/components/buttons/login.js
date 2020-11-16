@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
 
 const ButtonContainer = styled.div`
-  width: 41.5%;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   background: #ffffff;
   border: 1px solid #2cb1f4;
   box-sizing: border-box;
@@ -18,7 +18,6 @@ const ButtonContainer = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-    transition: color 200ms;
 
     font-family: Raleway;
     font-style: normal;

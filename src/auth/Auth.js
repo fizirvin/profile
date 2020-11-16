@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
+import { BrowserRouter, Switch, withRouter } from 'react-router-dom'
 import { AUTH_ROUTES } from 'constants/routes'
 import { renderRoutes } from 'functions'
 import { AuthLayout } from 'layouts'

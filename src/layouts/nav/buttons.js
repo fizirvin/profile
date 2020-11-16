@@ -10,14 +10,29 @@ const ButtonsContainer = styled.div`
   align-items: center;
 
   @media (max-width: 850px) {
+    display: none;
   }
+`
+
+export const LoginButtonArea = styled.div`
+  width: 41.5%;
+  height: 40px;
+`
+
+export const SignUpButtonArea = styled.div`
+  width: 73.5px;
+  height: 40px;
 `
 
 export default function Buttons() {
   return (
     <ButtonsContainer>
-      <LoginButton />
-      <SignUpButton />
+      <LoginButtonArea>
+        <LoginButton />
+      </LoginButtonArea>
+      <SignUpButtonArea>
+        <SignUpButton />
+      </SignUpButtonArea>
     </ButtonsContainer>
   )
 }

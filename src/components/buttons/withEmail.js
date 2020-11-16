@@ -31,10 +31,10 @@ const ButtonContainer = styled.div`
   }
 `
 
-export default function SignUpButton() {
+export default function WithEmailButton({ onClick }) {
   return (
-    <ButtonContainer>
-      <Link to={'/'}>Sign Up</Link>
+    <ButtonContainer onClick={onClick}>
+      <Link to={'/signup-with-email'}>Sign up with email</Link>
     </ButtonContainer>
   )
 }

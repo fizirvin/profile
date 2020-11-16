@@ -5,9 +5,8 @@ import Menu from './menu'
 import Buttons from './buttons'
 
 export const NavContainer = styled.nav`
-  display: flex;
-  background-color: yellow;
   width: 72.5%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   @media (max-width: 850px) {
