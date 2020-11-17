@@ -1,29 +1,37 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
+import { LoggedMenuArea } from 'containers'
 
 const UList = styled.ul`
-  width: 16.5%;
-  height: 16px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  a {
-    display: block;
-    transition: color 200ms;
+  li {
+    position: relative;
+    margin: 0 auto;
+
     font-family: Raleway;
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
+  }
 
-    color: #7c7c7c;
+  a {
+    display: block;
+    color: #eee;
+    padding: 0 1.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: color 650ms;
   }
 
   a:hover {
-    color: #2cb1f4;
+    color: #eb3007;
   }
 
   @media (max-width: 850px) {
@@ -47,32 +55,23 @@ const UList = styled.ul`
 `
 
 const Item = styled.li`
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-
-  :hover {
-    cursor: pointer;
+  :hover > ul {
+    top: 8rem;
     opacity: 1;
     visibility: visible;
   }
 `
 
-export default function Menu() {
+export default function LoggedMenu() {
   return (
-    <UList>
-      <Item>
-        <Link to={'/about'}>About</Link>
-      </Item>
-      <Item>
-        <Link to={'/jobs'}>Jobs</Link>
-      </Item>
-      <Item>
-        <Link to={'/lounge'}>Lounge</Link>
-      </Item>
-    </UList>
+    <LoggedMenuArea>
+      <UList>
+        <Item>Profile</Item>
+        <Item>Jobs</Item>
+        <Item>Professional Network</Item>
+        <Item>Lounge</Item>
+        <Item>Salary</Item>
+      </UList>
+    </LoggedMenuArea>
   )
 }

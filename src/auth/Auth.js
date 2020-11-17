@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Switch, withRouter } from 'react-router-dom'
 import { AUTH_ROUTES } from 'constants/routes'
 import { renderRoutes } from 'functions'
-import { AuthLayout } from 'layouts'
+import Layout from 'layouts'
 import App from 'App'
 
 const Auth = ({ history }) => {
@@ -45,13 +45,13 @@ const Auth = ({ history }) => {
 
   const renderHome = () => {
     if (auth.isAuth) {
-      return <App {...auth} />
+      return <App isAuth={auth.isAuth} />
     } else {
       return (
         <BrowserRouter>
-          <AuthLayout>
+          <Layout isAuth={auth.isAuth}>
             <Switch>{routes}</Switch>
-          </AuthLayout>
+          </Layout>
         </BrowserRouter>
       )
     }

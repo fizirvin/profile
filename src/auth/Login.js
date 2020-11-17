@@ -16,13 +16,13 @@ export default function Login() {
       <FormContainer>
         <LoginForm>
           login form
-          {/* <TitleForm>Create an Account For Free</TitleForm>
+          <TitleForm>Create an Account For Free</TitleForm>
           <FooterForm>
             <FooterText>Already have an account?</FooterText>
             <LoginButtonArea>
               <LoginButton />
             </LoginButtonArea>
-          </FooterForm> */}
+          </FooterForm>
         </LoginForm>
       </FormContainer>
     </LoginContainer>

@@ -1,9 +1,9 @@
-import { Layout } from 'layouts'
+import Layout from 'layouts'
 import { Profile } from 'pages'
 
-export default function App() {
+export default function App({ isAuth }) {
   return (
-    <Layout>
+    <Layout isAuth={isAuth}>
       <Profile />
     </Layout>
   )

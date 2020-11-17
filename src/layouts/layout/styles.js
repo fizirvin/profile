@@ -1,16 +1,5 @@
 import styled from '@emotion/styled'
 
-export const LayoutDiv = styled.div`
-  width: 100%;
-  background-size: cover;
-  background-color: #f2f2f2;
-`
-
-export const MainContainer = styled.main`
-  width: 100%;
-  margin-top: 30px;
-`
-
 export const FooterContainer = styled.main`
   width: 100%;
   margin-top: 60px;

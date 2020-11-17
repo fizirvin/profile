@@ -87,7 +87,7 @@ export default function SignupWithEmail() {
     }
   }
 
-  const addDefect = async (input) => {
+  const addUser = async (input) => {
     newUser.variables = { input }
     const { status, data } = await fetchItems(newUser)
 
@@ -119,7 +119,7 @@ export default function SignupWithEmail() {
       email,
       password
     }
-    addDefect(input)
+    addUser(input)
     setRequest(true)
   }
 

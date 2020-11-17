@@ -19,7 +19,7 @@ export const ContainerDiv = styled.div`
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 47.5%;
   height: 54px;
   margin-left: 28vw;
 `
