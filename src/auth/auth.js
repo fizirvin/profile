@@ -46,7 +46,7 @@ const Auth = ({ history }) => {
     setAuth({ isAuth: true, token, userId, firstName })
     localStorage.setItem('token', token)
     localStorage.setItem('userId', userId)
-    localStorage.setItem('name', firstName)
+    localStorage.setItem('firstName', firstName)
     const remainingMilliseconds = 60 * 60 * 1000
     const expiryDate = new Date(new Date().getTime() + remainingMilliseconds)
     localStorage.setItem('expiryDate', expiryDate.toISOString())

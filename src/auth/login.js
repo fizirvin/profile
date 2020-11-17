@@ -13,7 +13,8 @@ import {
   SignupButtonArea,
   ColumContainer,
   RequestMessageArea,
-  WithEmailButtonArea
+  WithEmailButtonArea,
+  OkButton
 } from './styles'
 
 export default function Login({ onLogin }) {
@@ -46,6 +47,7 @@ export default function Login({ onLogin }) {
       setRequestMessage(`${data}`)
     } else {
       const { login } = data
+      setRequestMessage('login')
       onLogin(login)
     }
   }
@@ -64,12 +66,20 @@ export default function Login({ onLogin }) {
     setRequest(true)
   }
 
+  const reset = () => {
+    setRequestMessage('')
+    setRequest(false)
+    setLoading(true)
+  }
+
   const submitResponse = () => {
     return (
       <>
         {loading && <Spinner />}
         {resquestMessage && (
-          <RequestMessageArea>{resquestMessage}</RequestMessageArea>
+          <RequestMessageArea>
+            {resquestMessage} <OkButton onClick={reset}>Ok </OkButton>
+          </RequestMessageArea>
         )}
       </>
     )
@@ -113,7 +123,7 @@ export default function Login({ onLogin }) {
   return (
     <LoginContainer>
       <FormContainer>
-        <LoginForm>{form()}</LoginForm>
+        <LoginForm>{request ? submitResponse() : form()}</LoginForm>
       </FormContainer>
     </LoginContainer>
   )

@@ -25,6 +25,10 @@ const ButtonContainer = styled.div`
     text-align: center;
 
     color: #ffffff;
+
+    :hover {
+      cursor: pointer;
+    }
   }
 
   @media (max-width: 850px) {

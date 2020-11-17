@@ -163,3 +163,21 @@ export const ColumContainer = styled.div(({ column }) => ({
   marginTop: '21.5px',
   marginBottom: '21.5px'
 }))
+
+export const OkButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  height: 35px;
+  background: #ffffff;
+  border: 1px solid #2cb1f4;
+  box-sizing: border-box;
+  border-radius: 3px;
+
+  color: #2cb1f4;
+
+  :hover {
+    cursor: pointer;
+  }
+`
