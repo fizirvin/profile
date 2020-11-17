@@ -16,7 +16,7 @@ const Auth = ({ history }) => {
       return
     }
     if (new Date(expiryDate) <= new Date()) {
-      this.logoutHandler()
+      logoutHandler()
       return
     }
 
