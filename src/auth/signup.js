@@ -18,12 +18,12 @@ export default function Login() {
         <LoginForm>
           <TitleForm>Create an Account For Free</TitleForm>
           <WithEmailButtonArea>
-            <WithEmailButton />
+            <WithEmailButton to={'/signup-with-email'} />
           </WithEmailButtonArea>
           <FooterForm>
             <FooterText>Already have an account?</FooterText>
             <LoginButtonArea>
-              <LoginButton />
+              <LoginButton to={'/login'} />
             </LoginButtonArea>
           </FooterForm>
         </LoginForm>

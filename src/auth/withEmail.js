@@ -2,13 +2,7 @@ import React, { useState } from 'react'
 import { newUser } from './mutations'
 import { fetchItems } from 'services'
 import { LoginButton, SignUpRequest } from 'components/buttons'
-import {
-  TextInput,
-  TextAllInput,
-  PasswordInput,
-  EmailInput,
-  Spinner
-} from 'components'
+import { TextInput, PasswordInput, EmailInput, Spinner } from 'components'
 import {
   LoginContainer,
   FormContainer,
@@ -92,12 +86,11 @@ export default function SignupWithEmail() {
     const { status, data } = await fetchItems(newUser)
 
     if (!status) {
-      console.log(data)
       setLoading(false)
-      setRequestMessage(`error ${data}`)
+      setRequestMessage(`${data}`)
     } else {
       const { newUser } = data
-      console.log(newUser.firstName)
+
       setLoading(false)
       setRequestMessage(`New user ${newUser.firstName} signed up correctly`)
     }
@@ -165,12 +158,12 @@ export default function SignupWithEmail() {
           onChange={onChangeHandler}
         />
         <WithEmailButtonArea>
-          <SignUpRequest onClick={onSubmit} />
+          <SignUpRequest onClick={onSubmit} title={'Sign up'} />
         </WithEmailButtonArea>
         <FooterForm>
           <FooterText>Already have an account?</FooterText>
           <LoginButtonArea>
-            <LoginButton />
+            <LoginButton to={'/login'} />
           </LoginButtonArea>
         </FooterForm>
       </>

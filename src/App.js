@@ -1,9 +1,9 @@
 import Layout from 'layouts'
 import { Profile } from 'pages'
 
-export default function App({ isAuth }) {
+export default function App({ isAuth, firstName }) {
   return (
-    <Layout isAuth={isAuth}>
+    <Layout isAuth={isAuth} firstName={firstName}>
       <Profile />
     </Layout>
   )

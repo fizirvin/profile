@@ -6,10 +6,10 @@ export default function Buttons() {
   return (
     <ButtonsContainer>
       <LoginButtonArea>
-        <LoginButton />
+        <LoginButton to={'/login'} />
       </LoginButtonArea>
       <SignUpButtonArea>
-        <SignUpButton />
+        <SignUpButton to={'/'} />
       </SignUpButtonArea>
     </ButtonsContainer>
   )

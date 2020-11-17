@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Switch, withRouter } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, withRouter } from 'react-router-dom'
 import { AUTH_ROUTES } from 'constants/routes'
 import { renderRoutes } from 'functions'
 import Layout from 'layouts'
 import App from 'App'
+import Login from './login'
 
 const Auth = ({ history }) => {
   const [auth, setAuth] = useState({})
@@ -41,16 +42,43 @@ const Auth = ({ history }) => {
     }, milliseconds)
   }
 
+  const setAuthHandler = ({ token, userId, firstName }) => {
+    setAuth({ isAuth: true, token, userId, firstName })
+    localStorage.setItem('token', token)
+    localStorage.setItem('userId', userId)
+    localStorage.setItem('name', firstName)
+    const remainingMilliseconds = 60 * 60 * 1000
+    const expiryDate = new Date(new Date().getTime() + remainingMilliseconds)
+    localStorage.setItem('expiryDate', expiryDate.toISOString())
+    setAutoLogout(remainingMilliseconds)
+    history.replace('/')
+  }
+
   const routes = renderRoutes(AUTH_ROUTES)
 
   const renderHome = () => {
     if (auth.isAuth) {
-      return <App isAuth={auth.isAuth} />
+      return (
+        <App
+          isAuth={auth.isAuth}
+          userId={auth.userId}
+          firstName={auth.firstName}
+        />
+      )
     } else {
       return (
         <BrowserRouter>
           <Layout isAuth={auth.isAuth}>
-            <Switch>{routes}</Switch>
+            <Switch>
+              <Route
+                path={'/login'}
+                exact
+                component={(props) => (
+                  <Login {...props} onLogin={setAuthHandler} />
+                )}
+              />
+              {routes}
+            </Switch>
           </Layout>
         </BrowserRouter>
       )

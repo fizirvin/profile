@@ -75,6 +75,11 @@ export const LoginButtonArea = styled.div`
   width: 17%;
 `
 
+export const SignupButtonArea = styled.div`
+  height: 35px;
+  width: 18%;
+`
+
 export const RowContainer = styled.div`
   display: flex;
   width: 100%;
@@ -138,3 +143,23 @@ export const RequestMessageArea = styled.div`
     width: 100%;
   }
 `
+
+// export const ColumContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   height: 95px;
+//   width: 100%;
+//   justify-content: space-between;
+//   margin-top: 21.5px;
+//   margin-bottom: 21.5px;
+// `
+
+export const ColumContainer = styled.div(({ column }) => ({
+  display: 'flex',
+  flexDirection: column && 'column',
+  height: '95px',
+  width: '100%',
+  justifyContent: 'space-between',
+  marginTop: '21.5px',
+  marginBottom: '21.5px'
+}))

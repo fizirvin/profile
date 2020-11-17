@@ -9,7 +9,7 @@ const ButtonContainer = styled.div`
   background: #2cb1f4;
   border-radius: 3px;
 
-  a {
+  div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,10 +31,10 @@ const ButtonContainer = styled.div`
   }
 `
 
-export default function SignUpRequest({ onClick }) {
+export default function SignUpRequest({ onClick, title }) {
   return (
     <ButtonContainer onClick={onClick}>
-      <Link to={'/signup-with-email'}>Sign up</Link>
+      <div>{title}</div>
     </ButtonContainer>
   )
 }

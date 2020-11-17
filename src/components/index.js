@@ -11,6 +11,7 @@ import SwitchInput from './switchInput'
 import PasswordInput from './passwordInput'
 import EmailInput from './emailInput'
 import Spinner from './spinner'
+import SimpleInput from './simpleInput'
 
 export {
   AddButton,
@@ -25,5 +26,6 @@ export {
   SwitchInput,
   PasswordInput,
   EmailInput,
-  Spinner
+  Spinner,
+  SimpleInput
 }

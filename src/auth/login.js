@@ -1,5 +1,8 @@
-import React from 'react'
-import { LoginButton } from 'components/buttons'
+import React, { useState } from 'react'
+import loginQuery from './queries'
+import { fetchItems } from 'services'
+import { SignUpButton, SignUpRequest } from 'components/buttons'
+import { SimpleInput, Spinner } from 'components'
 import {
   LoginContainer,
   FormContainer,
@@ -7,23 +10,110 @@ import {
   TitleForm,
   FooterForm,
   FooterText,
-  LoginButtonArea
+  SignupButtonArea,
+  ColumContainer,
+  RequestMessageArea,
+  WithEmailButtonArea
 } from './styles'
 
-export default function Login() {
+export default function Login({ onLogin }) {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [request, setRequest] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [resquestMessage, setRequestMessage] = useState('')
+
+  const onChangeHandler = (e) => {
+    const { name, value } = e.target
+    switch (name) {
+      case 'email':
+        setEmail(value)
+        break
+      case 'password':
+        setPassword(value)
+        break
+      default:
+        return
+    }
+  }
+
+  const loginHandler = async (input) => {
+    loginQuery.variables = { email: input.email, password: input.password }
+    const { status, data } = await fetchItems(loginQuery)
+
+    if (!status) {
+      setLoading(false)
+      setRequestMessage(`${data}`)
+    } else {
+      const { login } = data
+      onLogin(login)
+    }
+  }
+
+  const onSubmit = () => {
+    if (!email || !password) {
+      return
+    }
+
+    const input = {
+      email,
+      password
+    }
+
+    loginHandler(input)
+    setRequest(true)
+  }
+
+  const submitResponse = () => {
+    return (
+      <>
+        {loading && <Spinner />}
+        {resquestMessage && (
+          <RequestMessageArea>{resquestMessage}</RequestMessageArea>
+        )}
+      </>
+    )
+  }
+
+  const form = () => {
+    return (
+      <>
+        <TitleForm>Account Login</TitleForm>
+        <ColumContainer column>
+          <SimpleInput
+            placeholder={'Email Address'}
+            name={'email'}
+            value={email}
+            type={'email'}
+            onChange={onChangeHandler}
+          />
+          <SimpleInput
+            placeholder={'Password'}
+            name={'password'}
+            value={password}
+            type={'password'}
+            onChange={onChangeHandler}
+          />
+        </ColumContainer>
+        <WithEmailButtonArea>
+          <SignUpRequest title={'Login with email'} onClick={onSubmit} />
+        </WithEmailButtonArea>
+
+        <FooterForm>
+          <FooterText>Dont have an account?</FooterText>
+
+          <SignupButtonArea>
+            <SignUpButton to={'/'} />
+          </SignupButtonArea>
+        </FooterForm>
+      </>
+    )
+  }
+
   return (
     <LoginContainer>
       <FormContainer>
-        <LoginForm>
-          login form
-          <TitleForm>Create an Account For Free</TitleForm>
-          <FooterForm>
-            <FooterText>Already have an account?</FooterText>
-            <LoginButtonArea>
-              <LoginButton />
-            </LoginButtonArea>
-          </FooterForm>
-        </LoginForm>
+        <LoginForm>{form()}</LoginForm>
       </FormContainer>
     </LoginContainer>
   )

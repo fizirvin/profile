@@ -58,6 +58,28 @@ export const Input = styled.input`
   }
 `
 
+export const Simple = styled.input`
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 3px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #7c7c7c;
+
+  :focus {
+    outline-color: #2cb1f4;
+  }
+`
+
 export const AllInput = styled.input`
   height: 35px;
   width: 100%;

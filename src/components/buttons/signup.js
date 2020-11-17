@@ -31,10 +31,10 @@ const ButtonContainer = styled.div`
   }
 `
 
-export default function SignUpButton() {
+export default function SignUpButton({ to }) {
   return (
     <ButtonContainer>
-      <Link to={'/'}>Sign Up</Link>
+      <Link to={to}>Sign Up</Link>
     </ButtonContainer>
   )
 }
