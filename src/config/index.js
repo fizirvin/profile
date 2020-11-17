@@ -1,6 +1,6 @@
 import { localhost, url, options } from 'constants/server'
 
 export const database = {
-  url: localhost,
+  url: url,
   options: options
 }
