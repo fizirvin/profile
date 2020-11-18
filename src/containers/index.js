@@ -11,7 +11,6 @@ import {
 import {
   ButtonsContainer,
   CompleteContainer,
-  HeaderContainer,
   IconsContainer,
   LayoutContainer,
   ListItem,
@@ -34,7 +33,6 @@ export {
   UserImageArea,
   ButtonsContainer,
   CompleteContainer,
-  HeaderContainer,
   IconsContainer,
   LayoutContainer,
   PercentContainer,

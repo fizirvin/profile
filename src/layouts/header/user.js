@@ -4,7 +4,7 @@ import { FlexTextArea, UserContainer, UserImageArea } from 'containers'
 export default function User({ firstName }) {
   return (
     <UserContainer>
-      <FlexTextArea>{firstName}</FlexTextArea>
+      <FlexTextArea w={'100'}>{firstName}</FlexTextArea>
       <UserImageArea>
         <img
           alt={'user'}

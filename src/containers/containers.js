@@ -12,11 +12,12 @@ export const ButtonsContainer = styled.div`
 `
 
 export const CompleteContainer = styled.div`
-  display: flex;
-  align-items: center;
-  width: 47.6%;
-  height: 54px;
+  height: 100%;
+  width: 47.6vw;
   margin-left: 28vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 export const PercentContainer = styled.nav`
@@ -26,15 +27,8 @@ export const PercentContainer = styled.nav`
   align-items: center;
 `
 
-export const HeaderContainer = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
 export const IconsContainer = styled.div`
-  width: 11.1%;
+  width: 11%;
   display: flex;
   padding-left: 1.8%;
   padding-right: 1.8%;
@@ -53,11 +47,11 @@ export const LayoutContainer = styled.div`
 
 export const LogoContainer = styled.div`
   height: 20px;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   color: #333333;
-
   @media (max-width: 850px) {
     height: 18px;
     font-size: 15px;
@@ -71,7 +65,9 @@ export const MainContainer = styled.main`
 `
 
 export const NavContainer = styled.nav`
-  width: 72.2%;
+  height: 100%;
+  width: 72.2vw;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,7 +110,7 @@ export const ListItem = styled.li`
 `
 
 export const UserContainer = styled.nav`
-  width: 9.9%;
+  width: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
