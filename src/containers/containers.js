@@ -103,6 +103,14 @@ export const ListItem = styled.li`
     opacity: 1;
     visibility: visible;
   }
+  color: #7c7c7c;
+  a {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: #7c7c7c;
+  }
 `
 
 export const UserContainer = styled.nav`

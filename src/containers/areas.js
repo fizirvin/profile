@@ -18,7 +18,8 @@ export const FlexArea = styled.div(({ w }) => ({
 
 export const FlexTextArea = styled.div(({ w }) => ({
   height: '16px',
-  width: `${w}%`
+  width: `${w}%`,
+  color: '#7c7c7c'
 }))
 
 export const HeaderArea = styled.header`
