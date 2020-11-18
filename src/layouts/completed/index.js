@@ -1,15 +1,13 @@
 import React from 'react'
-import { Container, ContainerDiv, MainContainer } from './styles'
+import { CompleteArea, CompleteContainer } from 'containers'
 import Percent from './percent'
 
 export default function Completed() {
   return (
-    <MainContainer>
-      <ContainerDiv>
-        <Container>
-          <Percent progress={'5%'} />
-        </Container>
-      </ContainerDiv>
-    </MainContainer>
+    <CompleteArea>
+      <CompleteContainer>
+        <Percent progress={'5%'} />
+      </CompleteContainer>
+    </CompleteArea>
   )
 }

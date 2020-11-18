@@ -1,16 +1,16 @@
 import React from 'react'
 import { LoginButton, SignUpButton } from 'components/buttons'
-import { ButtonsContainer, LoginButtonArea, SignUpButtonArea } from 'containers'
+import { FlexArea, ButtonsContainer } from 'containers'
 
 export default function Buttons() {
   return (
     <ButtonsContainer>
-      <LoginButtonArea>
+      <FlexArea w={'41.5'}>
         <LoginButton to={'/login'} />
-      </LoginButtonArea>
-      <SignUpButtonArea>
+      </FlexArea>
+      <FlexArea w={'49.5'}>
         <SignUpButton to={'/'} />
-      </SignUpButtonArea>
+      </FlexArea>
     </ButtonsContainer>
   )
 }

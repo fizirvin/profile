@@ -1,39 +1,47 @@
 import {
+  CompleteArea,
+  FlexArea,
+  FlexTextArea,
   HeaderArea,
   IconArea,
   LoggedMenuArea,
-  LoginButtonArea,
-  SignUpButtonArea,
   UnloggedMenuArea,
-  UserImageArea,
-  UserNameArea
+  UserImageArea
 } from './areas'
 import {
   ButtonsContainer,
+  CompleteContainer,
   HeaderContainer,
   IconsContainer,
   LayoutContainer,
+  ListItem,
   LogoContainer,
   MainContainer,
   NavContainer,
+  PercentContainer,
+  UListContainer,
   UserContainer
 } from './containers'
 
 export {
+  CompleteArea,
+  FlexArea,
+  FlexTextArea,
   HeaderArea,
   IconArea,
   LoggedMenuArea,
-  LoginButtonArea,
-  SignUpButtonArea,
   UnloggedMenuArea,
   UserImageArea,
-  UserNameArea,
   ButtonsContainer,
+  CompleteContainer,
   HeaderContainer,
   IconsContainer,
   LayoutContainer,
+  PercentContainer,
+  ListItem,
   LogoContainer,
   MainContainer,
   NavContainer,
+  UListContainer,
   UserContainer
 }

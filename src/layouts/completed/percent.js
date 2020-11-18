@@ -5,7 +5,6 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-
   @media (max-width: 850px) {
     display: block;
     margin-left: 10%;
@@ -13,7 +12,7 @@ const Container = styled.div`
 `
 
 const CancelButton = styled.div`
-  width: 68px;
+  width: 43.7%;
   height: 35px;
   background: #ffffff;
   border: 1px solid #e1e1e1;
@@ -35,7 +34,7 @@ const CancelButton = styled.div`
 
 const SaveButton = styled.div`
   margin-left: 20px;
-  width: 68px;
+  width: 43.7%;
   height: 35px;
 
   font-family: Raleway;
@@ -55,7 +54,7 @@ const SaveButton = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   align-self: center;
-
+  width: 24%;
   @media (max-width: 850px) {
     margin-top: 3%;
   }
@@ -64,6 +63,13 @@ const ButtonContainer = styled.div`
 const Progress = styled.div`
   display: flex;
   align-self: center;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #7c7c7c;
 
   span {
     color: #2cb1f4;
