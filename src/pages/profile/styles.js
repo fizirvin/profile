@@ -7,12 +7,10 @@ export const ProfilesContainer = styled.main`
 `
 
 export const SettingsContainer = styled.main`
-  width: 50%;
-  max-width: 50%;
-
+  width: 47.6vw;
   @media (max-width: 850px) {
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    max-width: 100vw;
   }
 `
 

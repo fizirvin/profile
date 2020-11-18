@@ -60,7 +60,7 @@ export const LogoContainer = styled.div`
 `
 
 export const MainContainer = styled.main`
-  width: 100%;
+  width: 100vw;
   margin-top: 30px;
 `
 
