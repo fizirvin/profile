@@ -119,3 +119,12 @@ export const UserContainer = styled.nav`
     display: none;
   }
 `
+
+export const ModalContainer = styled.div`
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 35%;
+  border-radius: 4px;
+`

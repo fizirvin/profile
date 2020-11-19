@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import loginQuery from './queries'
 import { fetchItems } from 'services'
+import { useDispatch } from 'react-redux'
 import { SignUpButton, SignUpRequest } from 'components/buttons'
-import { SimpleInput, Spinner } from 'components'
+import { SimpleInput } from 'components'
 import {
   LoginContainer,
   FormContainer,
@@ -12,17 +13,13 @@ import {
   FooterText,
   SignupButtonArea,
   ColumContainer,
-  RequestMessageArea,
-  WithEmailButtonArea,
-  OkButton
+  WithEmailButtonArea
 } from './styles'
 
 export default function Login({ onLogin }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [request, setRequest] = useState(false)
-  const [loading, setLoading] = useState(true)
-  const [resquestMessage, setRequestMessage] = useState('')
+  const dispatch = useDispatch()
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target
@@ -38,16 +35,15 @@ export default function Login({ onLogin }) {
     }
   }
 
-  const loginHandler = async (input) => {
+  const loginHandler = async (input, onLogin) => {
     loginQuery.variables = { email: input.email, password: input.password }
     const { status, data } = await fetchItems(loginQuery)
 
     if (!status) {
-      setLoading(false)
-      setRequestMessage(`${data}`)
+      dispatch({ type: 'RESPONSE_ACTION', payload: `${data}` })
     } else {
       const { login } = data
-      setRequestMessage('login')
+      dispatch({ type: 'RESPONSE_ACTION', payload: 'login' })
       onLogin(login)
     }
   }
@@ -56,33 +52,12 @@ export default function Login({ onLogin }) {
     if (!email || !password) {
       return
     }
-
     const input = {
       email,
       password
     }
-
-    loginHandler(input)
-    setRequest(true)
-  }
-
-  const reset = () => {
-    setRequestMessage('')
-    setRequest(false)
-    setLoading(true)
-  }
-
-  const submitResponse = () => {
-    return (
-      <>
-        {loading && <Spinner />}
-        {resquestMessage && (
-          <RequestMessageArea>
-            {resquestMessage} <OkButton onClick={reset}>Ok </OkButton>
-          </RequestMessageArea>
-        )}
-      </>
-    )
+    dispatch({ type: 'REQUEST_ACTION' })
+    loginHandler(input, onLogin)
   }
 
   const form = () => {
@@ -123,7 +98,7 @@ export default function Login({ onLogin }) {
   return (
     <LoginContainer>
       <FormContainer>
-        <LoginForm>{request ? submitResponse() : form()}</LoginForm>
+        <LoginForm>{form()}</LoginForm>
       </FormContainer>
     </LoginContainer>
   )

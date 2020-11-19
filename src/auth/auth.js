@@ -4,7 +4,7 @@ import { AUTH_ROUTES } from 'constants/routes'
 import { renderRoutes } from 'functions'
 import Layout from 'layouts'
 import App from 'App'
-import Login from './login'
+import ConnectLogin from './connectLogin'
 
 const Auth = ({ history }) => {
   const [auth, setAuth] = useState({})
@@ -74,7 +74,7 @@ const Auth = ({ history }) => {
                 path={'/login'}
                 exact
                 component={(props) => (
-                  <Login {...props} onLogin={setAuthHandler} />
+                  <ConnectLogin {...props} onLogin={setAuthHandler} />
                 )}
               />
               {routes}

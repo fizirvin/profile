@@ -12,6 +12,7 @@ import PasswordInput from './passwordInput'
 import EmailInput from './emailInput'
 import Spinner from './spinner'
 import SimpleInput from './simpleInput'
+import Message from './message'
 
 export {
   AddButton,
@@ -27,5 +28,6 @@ export {
   PasswordInput,
   EmailInput,
   Spinner,
-  SimpleInput
+  SimpleInput,
+  Message
 }
