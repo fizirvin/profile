@@ -26,9 +26,6 @@ const ButtonContainer = styled.div`
 
     color: #ffffff;
   }
-
-  @media (max-width: 850px) {
-  }
 `
 
 export default function SignUpButton({ to }) {
